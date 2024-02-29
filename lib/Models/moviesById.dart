@@ -6,8 +6,7 @@ MoviesByIdApiCall(String id) async {
   var response = await http.get(
       Uri.parse('https://movies-api14.p.rapidapi.com/movie/$id'),
        headers: {
-    'X-RapidAPI-Key': '468f91dc8amshf41865004d75b0ap1a384fjsnf2ae337d8f13',
-    'X-RapidAPI-Host': 'movies-api14.p.rapidapi.com'
+   
   });
   String responseString = response.body;
   moviesById = MovieById.fromRawJson(responseString);
